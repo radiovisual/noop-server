@@ -29,7 +29,7 @@ noopServer().then(info => {
 
 ### noopServer()
 
-Starts the noop server on a free port. Returns and object with the port and pid.
+Starts the noop server on a free port. Returns an object with the port and pid.
 
 ## CLI
 
