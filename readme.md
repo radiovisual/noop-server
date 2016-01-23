@@ -37,7 +37,7 @@ Starts the noop server on a free port. Returns and object with the port and pid.
 $ npm install --global noop-server
 ```
 
-## ClI Useage
+## CLI Useage
 ```
 $ noop-server 
 noop-server port: 8009
