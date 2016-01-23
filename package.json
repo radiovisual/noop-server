@@ -9,7 +9,8 @@
     "email": "wuergler@gmail.com",
     "url": "numetriclabs.com"
   },
-  "bin": "cli.js",
+  "main" : "index.js",
+  "bin": "./cli.js",
   "engines": {
     "node": ">=0.10.0"
   },
