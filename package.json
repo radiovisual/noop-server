@@ -1,0 +1,44 @@
+{
+  "name": "noop-server",
+  "version": "0.0.1",
+  "description": "Launch a noop server on a free port. Useful for testing.",
+  "license": "MIT",
+  "repository": "radiovisual/noop-server",
+  "author": {
+    "name": "Michael Wuergler",
+    "email": "wuergler@gmail.com",
+    "url": "numetriclabs.com"
+  },
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js",
+    "cli.js"
+  ],
+  "keywords": [
+    "cli-app",
+    "cli",
+    "node",
+    "noop",
+    "server",
+    "port",
+    "testing",
+    "test"
+  ],
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "meow": "^3.6.0",
+    "pify": "^2.3.0",
+    "pinkie-promise": "^2.0.0",
+    "portfinder": "^0.4.0"
+  },
+  "devDependencies": {
+    "ava": "^0.8.0",
+    "xo": "^0.12.1"
+  }
+}
