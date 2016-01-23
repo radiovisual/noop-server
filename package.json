@@ -9,7 +9,7 @@
     "email": "wuergler@gmail.com",
     "url": "numetriclabs.com"
   },
-  "main" : "index.js",
+  "main": "index.js",
   "bin": "./cli.js",
   "engines": {
     "node": ">=0.10.0"
@@ -34,6 +34,7 @@
   "dependencies": {
     "chalk": "^1.1.1",
     "meow": "^3.6.0",
+    "minimist": "^1.2.0",
     "native-promise-only": "^0.8.1",
     "pify": "^2.3.0",
     "pinkie-promise": "^2.0.0",
