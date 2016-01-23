@@ -1,9 +1,10 @@
 'use strict';
-var Promise = require('pinkie-promise');
 var portfinder = require('portfinder');
 var chalk = require('chalk');
 var pify = require('pify');
 var serverInfo = {};
+
+require('native-promise-only');
 
 var server = require('http').createServer(function (req, res) {
 	res.end('noop-server excels at doing nothing.');
