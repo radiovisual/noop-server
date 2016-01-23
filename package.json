@@ -1,6 +1,6 @@
 {
   "name": "noop-server",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Launch a noop server on a free port. Useful for testing.",
   "license": "MIT",
   "repository": "radiovisual/noop-server",
