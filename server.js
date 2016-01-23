@@ -13,8 +13,14 @@ function startServer(port) {
 		if (err) {
 			throw err;
 		}
-		console.log('noop-server is now listening on port ', port);
+		console.log('noop-server is now running');
 	});
 }
 
-startServer(argv.port);
+if (!argv.port) {
+	console.log('please supply a port number with --port');
+	process.exit(1);
+} else {
+	startServer(argv.port);
+}
+

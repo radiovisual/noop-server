@@ -6,32 +6,27 @@ var pify = require('pify');
 
 require('native-promise-only');
 
-var serverInfo = {};
-
 module.exports = function (opts) {
 	opts = opts || {};
 
 	return new Promise(function (resolve, reject) {
 		pify(portfinder.getPort)().then(function (port) {
-			serverInfo.port = port;
-			serverInfo.pid = process.pid;
 
-			var cp = childProcess.spawn('node', ['./server.js', '--port=' + port]);
+			var cp = childProcess.spawn('node', ['./server.js', '--port=' + port], {
+				detached: true
+			});
 
-			cp.stdout.on('error', reject);
-
+			cp.on('error', reject);
 			cp.stdout.setEncoding('utf8');
 
 			cp.stdout.on('data', function (data) {
-				if (data.trim() === 'ok') {
-					log();
+				if (data.trim() === 'noop-server is now running') {
+					log(port);
 					cp.stdio = ['ignore', 'ignore', 'ignore'];
-					resolve(serverInfo);
+					resolve(port);
 				}
 			});
-			cp.stderr.on('data', function (data) {
-				console.log('cp.stderr: ', data);
-			});
+
 			cp.unref();
 		}).catch(function (err) {
 			console.log('noop-server not launched.');
@@ -40,8 +35,7 @@ module.exports = function (opts) {
 	});
 };
 
-function log(serverInfo) {
-	console.log(chalk.red('noop-server'), chalk.cyan('port:'), chalk.cyan(serverInfo.port));
-	console.log(chalk.red('noop-server'), chalk.yellow('pid:'), chalk.yellow(serverInfo.pid));
+function log(port) {
+	console.log(chalk.bgRed('noop-server port:'), chalk.cyan(port));
 }
 

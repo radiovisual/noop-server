@@ -9,5 +9,5 @@ var cli = meow([
 ]);
 
 noopServer(cli.input[0]).then(function (info) {
-	console.log('info: ', info);
+	//console.log('info: ', info);
 });

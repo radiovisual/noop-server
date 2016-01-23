@@ -29,7 +29,7 @@ noopServer().then(info => {
 
 ### noopServer()
 
-Starts the noop server on a free port. Returns an object with the port and pid.
+Starts the noop server on a free port. Returns the port number it is running on.
 
 ## CLI
 
@@ -41,7 +41,6 @@ $ npm install --global noop-server
 ```
 $ noop-server 
 noop-server port: 8009
-noop-server pid: 15182
 ```
 
 ## License
