@@ -5,16 +5,7 @@ var noopServer = require('./');
 
 var cli = meow([
 	'Usage',
-	'  $ noopserver',
-	'',
-	'Options',
-	'  --foo  Lorem ipsum. [Default: false]',
-	'',
-	'Examples',
-	'  $ noopserver',
-	'  unicorns & rainbows',
-	'  $ noopserver ponies',
-	'  ponies & rainbows'
+	'  $ noopserver'
 ]);
 
 noopServer(cli.input[0]).then(function (info) {
