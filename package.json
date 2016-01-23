@@ -1,6 +1,6 @@
 {
   "name": "noop-server",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Launch a noop server on a free port. Useful for testing.",
   "license": "MIT",
   "repository": "radiovisual/noop-server",
@@ -19,7 +19,8 @@
   },
   "files": [
     "index.js",
-    "cli.js"
+    "cli.js",
+    "server.js"
   ],
   "keywords": [
     "cli-app",
