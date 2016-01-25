@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "bin": {
-    "noopserver": "cli.js"
+    "noopserver": "./cli.js"
   },
   "engines": {
     "node": ">=0.10.0"
