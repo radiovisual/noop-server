@@ -1,7 +1,7 @@
 {
   "name": "noop-server",
-  "version": "0.0.5",
-  "description": "Launch a noop server on a free port. Useful for testing.",
+  "version": "0.0.6",
+  "description": "Quickly launch a noop server on a free port. Useful for testing.",
   "license": "MIT",
   "repository": "radiovisual/noop-server",
   "author": {
@@ -21,8 +21,7 @@
   },
   "files": [
     "index.js",
-    "cli.js",
-    "server.js"
+    "cli.js"
   ],
   "keywords": [
     "cli-app",
@@ -32,16 +31,13 @@
     "server",
     "port",
     "testing",
-    "test"
+    "test",
+    "nop"
   ],
   "dependencies": {
     "chalk": "^1.1.1",
     "meow": "^3.6.0",
-    "minimist": "^1.2.0",
-    "native-promise-only": "^0.8.1",
-    "pify": "^2.3.0",
-    "pinkie-promise": "^2.0.0",
-    "portfinder": "^0.4.0"
+    "native-promise-only": "^0.8.1"
   },
   "devDependencies": {
     "ava": "^0.8.0",

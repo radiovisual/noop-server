@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 'use strict';
-var meow = require('meow');
 var noopServer = require('./');
+var chalk = require('chalk');
+var meow = require('meow');
 
 var cli = meow([
 	'Usage',
 	'  $ noopserver'
 ]);
 
-noopServer(cli.input[0]).then(function (info) {
-	//console.log('info: ', info);
+noopServer(cli.input[0]).then(function (port) {
+	console.log(chalk.bgRed('noop-server port:'), chalk.cyan(port));
 });
